@@ -9,7 +9,7 @@ class Category(db.Model):
                             lazy=True)
 
     def __repr__(self):
-        # repr to represent itself in the form of a string
+        # __repr__ to represent itself in the form of a string
         return self.category_name
 
 
@@ -24,7 +24,7 @@ class Task(db.Model):
                             ondelete="CASCADE"), nullable=False)
 
     def __repr__(self):
-        # repr to represent itself in the form of a string
-        return "#{0} - Task: {1} | Urgent: {2}". format(
+        # __repr__ to represent itself in the form of a string
+        return "#{0} - Task: {1} | Urgent: {2}".format(
             self.id, self.task_name, self.is_urgent
         )
