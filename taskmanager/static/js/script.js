@@ -1,4 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
     let sidenav = document.querySelectorAll('.sidenav');
-    M.Sidenav.init(elems, options);
+    M.Sidenav.init(sidenav);
   });
