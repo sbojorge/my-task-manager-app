@@ -68,7 +68,7 @@ def edit_task(task_id):
         task.task_name = request.form.get("task_name")
         task.task_description = request.form.get("task_description")
         task.is_urgent = bool(True if request.form.get("is_urgent") else False)
-        tas.due_date = request.form.get("due_date")
+        task.due_date = request.form.get("due_date")
         task.category_id = request.form.get("category_id")
         db.session.commit()
     return render_template("edit_task.html", task=task, categories=categories)
